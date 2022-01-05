@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* Navbar */
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1ac68d;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #1ac68d;
+}
+.nav-link {
+  color: #1ac68d;
+}
