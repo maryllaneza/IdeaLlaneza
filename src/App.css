@@ -44,8 +44,14 @@
   background-color: #1ac68d;
 }
 .nav-link:focus, .nav-link:hover {
-  color: #1ac68d;
+  background-color: #1ac68d;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.5s ease-out;
 }
 .nav-link {
+  color: #1ac68d;
+}
+.carrito{
   color: #1ac68d;
 }
