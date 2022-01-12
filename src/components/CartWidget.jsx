@@ -4,7 +4,7 @@ import React from "react";
 export default function CartWidget (){
     return(
         <>
-        <i class="fa fa-shopping-cart"></i> 4
+        <i className="fa fa-shopping-cart"></i> 4
         </>
     )
 }

@@ -55,3 +55,13 @@
 .carrito{
   color: #1ac68d;
 }
+.cantidad{
+  width: 50px;
+text-align: center;
+border: 1px solid #1ac68d52;
+}
+
+.verde{
+  background-color: #1ac68d;
+  color: #fff;
+}
