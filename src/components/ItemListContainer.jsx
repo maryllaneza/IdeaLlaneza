@@ -1,7 +1,8 @@
 import React from "react";
+import ItemList from "./ItemList";
 
-export default function ItemListContainer ({greeting}){
+export default function ItemListContainer (){
     return(
-      <h2>{greeting}</h2>
+      <ItemList/>
     )
 }

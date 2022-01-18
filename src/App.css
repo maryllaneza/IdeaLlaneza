@@ -65,3 +65,14 @@ border: 1px solid #1ac68d52;
   background-color: #1ac68d;
   color: #fff;
 }
+
+.card{
+  width: 18rem;
+}
+
+.card-img-top{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  max-height: 280px;
+}

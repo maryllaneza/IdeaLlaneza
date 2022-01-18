@@ -1,17 +1,17 @@
 import { useState } from "react";
 
 export default function ItemCount ({stock, initial, onAdd}){
-    const [cantidad, setCantidad] = useState(parseInt(initial));
+    const [cantidad, setCantidad] = useState(initial);
 
     const sumar = ()=>{
         if(cantidad<stock){
-            setCantidad(parseInt(cantidad+1))
+            setCantidad(cantidad+1)
         }
 
     }
     const restar = ()=>{
         if(cantidad>0){
-            setCantidad(parseInt(cantidad-1))
+            setCantidad(cantidad-1)
         }
     }
 
