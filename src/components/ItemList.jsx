@@ -17,36 +17,36 @@ export default function ItemList (){
             title:"Pandurata",
             description:"Ficus lyrata, comúnmente conocido como higuera hoja de violín, es una especie de planta con flores perteneciente a la familia Moraceae.",
             price:1050.00,
-            pictureUrl: "https://cdn.shopify.com/s/files/1/0062/0521/0712/products/Ficus_pandurata-lyrata_maceta_blanca_2048x2048.jpg?v=1593402446",
+            pictureUrl: "https://static.turbosquid.com/Preview/001229/665/EG/3D-plant-012---ficus_600.jpg",
             stock:10
         },
         {
             id:3,
-            title:"Rosa del Desierto",
-            description:"La rosa del desierto es una roca sedimentaria evaporítica formada en los desiertos, de ahí su nombre, cuando se forman diversas capas de yeso, agua y arena.",
+            title:"Strelitzia",
+            description:"oporta temperaturas altas, los exteriores sin sol directo, los interiores o la sombra, no necesita mucho riego y tiene hoja perenne. Recuerdan a los bananeros por sus hojas y se ven tanto en parterres de algunas ciudades mediterráneas como en hoteles y salones.  La versión Strelitzia Nicolai puede superar los 10 metros de altura y algunas de sus hojas llegar al metro. Para formentar su crecimiento lo ideal es trasplantarlas a un tiesto mayor y pulverizar sus hojas todo el año.",
             price:1530.00,
-            pictureUrl: "https://noticiasdelaciencia.com/upload/images/11_2018/7113_adenium-31.jpg?38",
+            pictureUrl: "https://static.turbosquid.com/Preview/2020/02/27__08_09_05/render3.png98910B4D-F586-4CBC-BF3D-B72DF1CB15EADefaultHQ.jpg",
             stock:3
         },
         {
             id:4,
-            title:"Rosa del Desierto",
-            description:"La rosa del desierto es una roca sedimentaria evaporítica formada en los desiertos, de ahí su nombre, cuando se forman diversas capas de yeso, agua y arena.",
-            price:1530.00,
-            pictureUrl: "https://noticiasdelaciencia.com/upload/images/11_2018/7113_adenium-31.jpg?38",
+            title:"Zamioculca",
+            description:"Se destaca por su porte atípico y moderno y por sus hojas compuestas por un tallo grueso y foliolos redondos de color verde oscuro y con un brillo muy característico. Necesita poca luz, incluso con la artificial le basta, y poca agua, basta con un riego moderado y dejando secar la tierra entre riego y riego. El único pero son sus raíces, muy voluminosas, que requerirán que la planta sea trasplantada cada dos años a un tiesto de mayor para favorecer su adecuado crecimiento.",
+            price:1220.00,
+            pictureUrl: "https://static.turbosquid.com/Preview/2020/06/01__04_32_43/RENDER1.png662CCE98-51C6-452A-BFE0-436A63FC4744DefaultHQ.jpg",
             stock:3
         }
     ]
 
     const [plantasArray, setPlantasArray] = useState([]);
     const [carga, setCarga] = useState(false);
-    const listarProd = new Promise ((resolve, reject)=>{
-        setTimeout(function(){
-            resolve(plantas);
-            console.log(plantas);
-        }, 2000);
-    })
+
     useEffect(()=>{
+        const listarProd = new Promise ((resolve, reject)=>{
+            setTimeout(function(){
+                resolve(plantas);
+            }, 2000);
+        })
         listarProd
         .then(res=>{
             setPlantasArray(res);
@@ -58,7 +58,7 @@ export default function ItemList (){
             
         });
 
-    });
+    }, []);
     return(
        <>
       {(carga) ?

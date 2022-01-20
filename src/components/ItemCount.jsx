@@ -20,7 +20,7 @@ export default function ItemCount ({stock, initial, onAdd}){
         onAdd(cantidad)
     }
     return(
-      <div className="container mt-5">
+      <div className="container counter">
                      <div className="row">
                         <div className="col-sm-4">
                              <div className="input-group mb-3">
