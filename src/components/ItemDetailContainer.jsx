@@ -1,37 +1,38 @@
 import React, {useEffect, useState} from "react";
 import ItemDetail from "./ItemDetail";
+import {useParams } from 'react-router-dom';
+import loading from "../loading.svg";
 
 export default function ItemDetailContainer (){
-    const planta1 = {
-            id:1,
-            title:"Monstera",
-            description:"Monstera deliciosa, llamada comúnmente cerimán o costilla de Adán, es una especie de planta trepadora de la familia Araceae, endémica de selvas tropicales, que se distribuye desde el centro y sur de México hasta el norte de Argentina.",
-            price:890.00,
-            pictureUrl: "https://static.turbosquid.com/Preview/001159/128/11/monstera-3D_Z.jpg",
-            stock:5
-    }
-
-    const [item, setItem] = useState({});
+    const { itemId } = useParams();
+     const [item, setItem] = useState({}); 
+     const [carga, setCarga] = useState(false);
+    let prodSelected = {};
 
     useEffect(()=>{
-        const getItem = new Promise ((resolve, reject)=>{
-            setTimeout(function(){
-                resolve(planta1);
-            }, 2000);
-        })
-        getItem
-        .then(res=>{
-            setItem(res);
-        })
-        .catch(err => {
-            console.log("ocurrió un error" , err);
-        });
+            fetch('https://run.mocky.io/v3/8a91c5dc-c234-431f-8698-19d07edef833')
+            .then(response => response.json())
+            .then(res=>{
+                prodSelected = res.filter(item => item.id == itemId);
+                setItem({...prodSelected[0]});
+                setCarga(true);
+            })
+            .catch(err => {
+                console.log("ocurrió un error" , err);
+                setCarga(true);
+            });
 
     }, []);
     return(
-       <div className="row">
-      <ItemDetail item={item}/>
-      </div>
+        <>
+        {(carga) ?
+             <div className="row contenedorProd">
+             {
+               <ItemDetail item={item}/>}</div>
+             :
+             <img src={loading} alt="loading" className="loading"/> 
+         } 
+         </>
     )
 } 
 

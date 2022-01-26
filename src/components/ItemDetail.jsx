@@ -5,13 +5,13 @@ import ItemCount from "./ItemCount";
 export default function ItemDetail ({item}){
     return(
         <div className="container">
-		<div className="card">
+		<div className="card card-detalle">
 			<div className="container-fliud">
 				<div className="wrapper row">
 					<div className="preview col-md-6">
 						
 						<div className="preview-pic tab-content">
-						  <img src={item.pictureUrl} />
+						  <img src={item.pictureUrl} alt="prod"/>
 					
 						</div>
 					

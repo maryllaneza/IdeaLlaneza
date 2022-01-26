@@ -1,23 +1,40 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import logo from "../logofotosintesis.png";
+import { NavLink } from "react-router-dom";
 
 
 export default function NavBar (){
     return(
-        <div className="container">
-  <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
-      <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li className="nav-item"><a href="#" className="nav-link active" aria-current="page">Inicio</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Interior</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Exterior</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">Suculentas y Cactus</a></li>
-        <li className="nav-item"><a href="#" className="nav-link">DecoNatural</a></li>
-      </ul>
-      <div className="col-md-3 text-end carrito">
-      <CartWidget/>
-</div>
-    </header>
-    
-  </div>
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top menu">
+      <div className="container-fluid">
+        <img src={logo} alt="fotosintesis" className="logo"/>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
+          <ul className="navbar-nav me-auto mb-2 mb-md-0">
+            <li className="nav-item">
+              <NavLink to={"/"} className="nav-link">Inicio</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={'/category/1'} >Interior</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={'/category/2'} >Exterior</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={'/category/3'} >Suculentas y Cactus</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={'/category/4'} >DecoNatural</NavLink>
+            </li>
+          </ul>
+          <form className="d-flex">
+            <CartWidget/>
+          </form>
+        </div>
+      </div>
+    </nav>
     )
 }
