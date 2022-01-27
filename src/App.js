@@ -6,6 +6,8 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Cart from "./components/Cart";
+
 
 
 function App() {
@@ -21,6 +23,9 @@ function App() {
           </Route>
          <Route path="/category/:category">
             <ItemListContainer/>
+          </Route> 
+          <Route path="/cart">
+            <Cart/>
           </Route> 
       </Switch>
     </BrowserRouter>

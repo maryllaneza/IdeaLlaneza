@@ -14,10 +14,19 @@ export default function Item ({item}){
                 <p className="card-text">${item.price}</p>
       
             <Link className="btn detalle" to={'/detail/'+item.id} >Ver detalle</Link>
-            <p className="card-text">
-                Stock: {item.stock}
-                </p>
-            </div>
+            {(item.stock>0)?
+             <p className="card-text">
+             Stock: {item.stock}
+             </p>
+             :
+             <p className="card-text sinStock">
+            <i className="fa fa-meh-o" /> No hay stock
+             </p>
+            
+                
+            }
+           </div>
+                
         </div>
         </div>
 

@@ -215,6 +215,10 @@ img {
   width: 100%;
   margin-bottom: 1rem;
 }
+
+.sinStock{
+  color:red;
+}
 .contenedorProd{
   background-image: url("../src/Hexagon.svg");
   background-size: auto;

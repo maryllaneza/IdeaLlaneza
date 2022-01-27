@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 
 export default function ItemDetail ({item}){
+	const [prodCart, setProdCart ] =useState(false);
+	const onAdd = (cantidad) => {
+        console.log("agrego cantidad: ",cantidad);
+		setProdCart(cantidad>0);
+    }
     return(
         <div className="container">
 		<div className="card card-detalle">
@@ -29,7 +35,15 @@ export default function ItemDetail ({item}){
 						<p className="product-description">{item.description}</p>
 						<h4 className="price"><span>$ {item.price}</span></h4>
 						<div className="action">
-                          <ItemCount stock={item.stock} initial={1} onAdd="onAdd"/> 
+							{(!prodCart)?
+							 <ItemCount stock={item.stock} initial={item.stock>0?1:0} onAdd={onAdd}/> 
+							 :
+							 <div className="col-sm-3">
+							<Link className="btn btn-sm verde" to={'/cart'} ><i className="fa fa-shopping-cart"></i> Terminar compra</Link>
+							 </div>
+						
+						}
+                         
 						</div>
 					</div>
 				</div>

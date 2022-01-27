@@ -8,7 +8,7 @@ export default function ItemListContainer (){
   const [carga, setCarga] = useState(false);
   const { category } = useParams();
   useEffect(()=>{
-      fetch('https://run.mocky.io/v3/8a91c5dc-c234-431f-8698-19d07edef833')
+      fetch('https://run.mocky.io/v3/d9680c49-def3-46c8-a2ac-5418bc8c50e9')
       .then(response => response.json())
       .then(res=>{
         category===undefined? setPlantasArray(res): setPlantasArray(res.filter(item => item.category == category));
