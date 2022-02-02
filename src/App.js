@@ -7,11 +7,13 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from "./components/Cart";
+import CartContext from './context/CartContext';
 
 
 
 function App() {
   return (
+    <CartContext>
     <BrowserRouter>
       <NavBar />
         <Switch>
@@ -29,6 +31,7 @@ function App() {
           </Route> 
       </Switch>
     </BrowserRouter>
+    </CartContext>
   );
 }
 
