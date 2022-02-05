@@ -18,16 +18,16 @@ export default function NavBar (){
               <NavLink to={"/"} className="nav-link">Inicio</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to={'/category/1'} >Interior</NavLink>
+              <NavLink className="nav-link" to={'/category/interior'} >Interior</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to={'/category/2'} >Exterior</NavLink>
+              <NavLink className="nav-link" to={'/category/exterior'} >Exterior</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to={'/category/3'} >Suculentas y Cactus</NavLink>
+              <NavLink className="nav-link" to={'/category/suculentas-cactus'} >Suculentas y Cactus</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to={'/category/4'} >DecoNatural</NavLink>
+              <NavLink className="nav-link" to={'/category/deconatural'} >DecoNatural</NavLink>
             </li>
           </ul>
           <form className="d-flex">
