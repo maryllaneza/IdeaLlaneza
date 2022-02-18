@@ -56,7 +56,8 @@ const { cart, removeItem, clear, total } = useContext(contexto);
 			                    </tbody>
 			                </table>
 			                <div className="btn-cart-totals">
-                                <button className="checkout btn">¡Comprar!</button>
+							<Link className="btn btn-sm verde checkout" to={'/shop'} >¡Comprar!</Link>
+                               
                                 <button className="checkout btn azul">Vaciar Carrito</button>
 			                </div>
 			            </form>
