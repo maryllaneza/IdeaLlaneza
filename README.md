@@ -36,6 +36,8 @@ https://colorhunt.co/palette/f8f1f111698e19456b16c79a
 
 ## Deploy
 
+https://fotosintesis.netlify.app/
+
 ## Preview
 
 ![Demonstration](https://drive.google.com/file/d/1apU2ZGY771k3yc0QSQFZnpp-L1Zge5tB/view?usp=sharing)
