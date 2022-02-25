@@ -2,13 +2,13 @@ import React, { useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import { contexto } from "../context/CartContext";
+import Icon from "./Icon";
 
 
 export default function ItemDetail ({item}){
 	const [prodCart, setProdCart ] =useState(false);
 	const {addItem} =useContext(contexto);
 	const onAdd = (cantidad) => {
-        console.log("agrego cantidad: ",cantidad);
 		setProdCart(cantidad>0);
 		addItem(item, cantidad);
     }
@@ -30,9 +30,10 @@ export default function ItemDetail ({item}){
 						<h3 className="product-title">{item.title}</h3>
 						<div className="rating">
 							<div className="water">
-                                    <span className='fa fa-tint'></span>
-                                    <span className='fa fa-tint'></span>
-                                    <span className='fa fa-tint'></span>
+								<Icon countIcon={item.water} typeIcon='fa fa-tint'/>
+							</div>
+							<div className="sun">
+								<Icon countIcon={item.sun} typeIcon='fa fa-sun-o'/>
 							</div>
 						</div>
 						<p className="product-description">{item.description}</p>

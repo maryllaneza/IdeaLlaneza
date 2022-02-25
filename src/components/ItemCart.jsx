@@ -13,9 +13,12 @@ export const ItemCart = ({element}) => {
           <div className="name-product">
               {element.item.title}
           </div>
-          <div className="price">
-              $ {element.item.price}
-          </div>
+      
+      </div>
+  </td>
+  <td className="product-price">
+  <div >
+       $  {element.item.price}
       </div>
   </td>
   <td className="product-count">

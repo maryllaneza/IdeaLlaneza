@@ -9,6 +9,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Cart from "./components/Cart";
 import CartContext from './context/CartContext';
 import ShopForm from './components/ShopForm';
+import ThankYou from './components/ThankYou';
+import Footer from './components/Footer';
+import NotFound from './components/NotFound';
 
 
 
@@ -33,7 +36,14 @@ function App() {
           <Route path="/shop">
             <ShopForm/>
           </Route> 
+          <Route path="/thankYou">
+            <ThankYou/>
+          </Route> 
+          <Route path="*">
+            <NotFound />
+          </Route>
       </Switch>
+      <Footer />
     </BrowserRouter>
     </CartContext>
   );
