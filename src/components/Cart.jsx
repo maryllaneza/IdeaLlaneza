@@ -6,7 +6,7 @@ import { ItemCart } from "./ItemCart";
 
 
 export default function Cart (){
-const { cart, removeItem, clear, total } = useContext(contexto);
+const {cart} = useContext(contexto);
 
     return(
         <>

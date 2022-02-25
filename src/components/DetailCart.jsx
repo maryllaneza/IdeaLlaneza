@@ -25,7 +25,7 @@ function DetailCart() {
                 </tr>
             </tbody>
         </table>
-        {actualPath.pathname=="/cart" && ( 
+        {actualPath.pathname==="/cart" && ( 
         <div className="btn-cart-totals">
             <Link className="btn verde checkout" to={'/shop'} >¡Comprar!</Link>
             <button className="checkout btn azul">Vaciar Carrito</button>

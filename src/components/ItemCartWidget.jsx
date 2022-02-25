@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { contexto } from '../context/CartContext';
 
 export const ItemCartWidget = ({element}) => {
-    const { cart, removeItem } = useContext(contexto);
+    const { removeItem } = useContext(contexto);
   return(
   <li>
   <span className="item">
